@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Citadel: Engineers of Westeros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #050505;
+            color: #d6d3d1;
+            margin: 0;
+            overflow-x: hidden;
+            font-family: 'Playfair Display', serif;
+        }
+        .font-regal { font-family: 'Cinzel', serif; }
+        .font-classic { font-family: 'Playfair Display', serif; }
+        .font-tech { font-family: 'JetBrains Mono', monospace; }
+        
+        .bg-citadel {
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(138, 109, 59, 0.05) 0%, transparent 70%),
+                url('https://www.transparenttextures.com/patterns/dark-leather.png');
+            background-attachment: fixed;
+        }
+        
+        .parchment-panel {
+            background: linear-gradient(135deg, rgba(20, 18, 16, 0.95) 0%, rgba(5, 5, 5, 0.98) 100%);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(138, 109, 59, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        /* Shield Shape for Cards */
+        .shield-card {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        .shield-card:hover {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        /* Metallic Frames */
+        .metallic-border {
+            border: 2px solid;
+            border-image: linear-gradient(to bottom, #8a6d3b, #4a371c, #8a6d3b) 1;
+        }
+
+        .corner-accent::before, .corner-accent::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #8a6d3b;
+            z-index: 20;
+        }
+        .corner-accent-tl::before { top: -5px; left: -5px; border-right: 0; border-bottom: 0; }
+        .corner-accent-br::after { bottom: -5px; right: -5px; border-left: 0; border-top: 0; }
+
+        /* Environmental Animations */
+        @keyframes fall {
+            0% { transform: translateY(-10vh) translateX(0); opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(110vh) translateX(20px); opacity: 0; }
+        }
+        .particle {
+            position: fixed;
+            top: -10vh;
+            pointer-events: none;
+            z-index: 1;
+            border-radius: 50%;
+        }
+        .snow { background: white; animation: fall 5s linear infinite; }
+        .ember { background: #ff4d00; box-shadow: 0 0 10px #ff4d00; animation: fall 3s ease-in infinite; }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ffffff;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d1d1d1;
+        }
+
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+          animation: spin-slow 20s linear infinite;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-citadel">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
