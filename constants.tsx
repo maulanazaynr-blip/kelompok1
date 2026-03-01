@@ -10,7 +10,7 @@ export const ENGINEERS: Engineer[] = [
     externalUrl: 'https://zayn-six.vercel.app/',
     bio: 'A dedicated professional with extensive experience in land surveying and mapping. Specialized in high-precision cartography and geographic information systems.',
     image: 'https://www.technogis.co.id/wp-content/uploads/2022/10/Mengenal-Theodolite-untuk-Survey-dan-Pemetaan.jpg',
-    blueprint: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV8UGVBpFdsXmzKoKBJhorsnz7uEycRFvLTg&s',
+    blueprint: 'https://scmohan.com.sg/wp-content/uploads/2023/05/photo-indonesias-upcoming-project-ikn-ibu-kota-negara-760x507-1.jpg',
     stats: [
       { label: 'Surveying Precision', value: 99 },
       { label: 'Cartography', value: 95 }
@@ -35,15 +35,15 @@ export const ENGINEERS: Engineer[] = [
   {
     id: '3',
     name: 'Fakhri',
-    title: 'Industrial Engineer',
-    specialty: 'Industrial Engineering',
+    title: 'Industrial Legal-Technology',
+    specialty: 'Industrial Control System Security',
     externalUrl: 'https://fukuru.vercel.app/',
-    bio: 'Industrial systems expert with a strong background in supply chain management and operational efficiency. Committed to streamlining complex organizational processes.',
+    bio: 'Expert in industrial legal-technology and control system security, focusing on the intersection of operational efficiency and cybersecurity in complex industrial environments.',
     image: 'https://images.unsplash.com/photo-1565891741441-64926e441838?auto=format&fit=crop&q=80&w=600',
     blueprint: 'https://ik.imagekit.io/megaproject/factory/factory-5.png?tr=w-600%2Cf-auto',
     stats: [
       { label: 'Process Optimization', value: 97 },
-      { label: 'Logistics Tactics', value: 94 }
+      { label: 'Industrial Control System', value: 94 }
     ],
     notableProjects: ['The Dragonstone Supply Chain', 'The King’s Landing Assembly Line']
   },
@@ -54,8 +54,8 @@ export const ENGINEERS: Engineer[] = [
     specialty: 'Electrical Engineering',
     externalUrl: 'https://sabian.vercel.app/',
     bio: 'Electrical engineer specializing in power distribution and circuit design. Proven track record in implementing large-scale electrical infrastructure projects.',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600',
-    blueprint: 'https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&q=80&w=1000',
+    image: 'https://assets.new.siemens.com/siemens/assets/api/uuid:dfbfc449-5ff4-4a05-8452-a1dc61d7453e/width:1024/quality:HIGH/dfbfc449-5ff4-4a05-8452-a1dc61d7453e-high.webp',
+    blueprint: 'https://www.nextmsc.com/nextmsc-stg/images/news-transformer-monitoring-market-header-image_1756212523.jpeg',
     stats: [
       { label: 'Circuit Design', value: 95 },
       { label: 'Power Distribution', value: 100 }
